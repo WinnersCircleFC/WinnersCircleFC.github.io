@@ -63,7 +63,7 @@ const About = () => {
         <div className="text-zone">
           <div className="info-card">
             <h1>
-              <span className={`${letterClass} _1`}>A Bit About Me</span>
+              <span className={`${letterClass} _1`}>About WCFC</span>
             </h1>
             <p>
               Welcome to my portfolio! I am Nika Gedenidze, a Computer Science
@@ -89,24 +89,6 @@ const About = () => {
               40% and conversion rates by 25%.
             </p>
             <br />
-          </div>
-          <div className="info-card">
-            <h1>
-              <span className={`${letterClass} _1`}>Hobbies</span>
-            </h1>
-            <p>
-              Beyond coding, I enjoy music production, collecting vinyl records,
-              and skateboarding. I also love reading and watching movies, which
-              provide fresh perspectives that I bring into my professional
-              endeavors.
-            </p>
-            <br />
-            <p>
-              I look forward to leveraging my skills and creativity to make a
-              meaningful impact in future roles. I am excited to explore
-              opportunities that allow me to merge my love for technology with
-              my other interests.
-            </p>
           </div>
         </div>
 

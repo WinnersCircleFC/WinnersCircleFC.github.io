@@ -12,9 +12,13 @@ body {
   margin: 0;
   font: 300 11px/1.4 'Lobster Regular', 'sans-serif';
   color: #ffffff;
-  background-color:#181f2a;
-  background-image: url('./scr.svg');
-  background-size: cover;
+  background: radial-gradient(circle at center, 
+                              #262424ff 0%, 
+                              #1e1e1eff 50%, 
+                              #141414ff 100%);
+
+  background-size: fill;
+  background-repeat: repeat;
   background-position: 0px 0px;
   opacity: 1;
   overflow: hidden;

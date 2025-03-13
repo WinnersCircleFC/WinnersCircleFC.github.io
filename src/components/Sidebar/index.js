@@ -1,61 +1,99 @@
-import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import LogoS from '../../assets/logo-2.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faUser, faRocket, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { useSwipeable } from 'react-swipeable';
-import 'normalize.css';
-import './index.scss'; // make sure you import your SCSS
+import React, { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+import LogoS from "../../assets/WCFC Logo_White.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faHome,
+  faUser,
+  faRocket,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
+import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { useSwipeable } from "react-swipeable";
+import "normalize.css";
+import "./index.scss"; // make sure you import your SCSS
 
 const Sidebar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [isBlurred, setIsBlurred] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
-    setIsBlurred(true);
+  };
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      // Optionally close the drawer after scrolling
+      setDrawerOpen(false);
+    }
   };
 
   const handlers = useSwipeable({
     onSwipedLeft: () => setDrawerOpen(false),
     preventDefaultTouchmoveEvent: true,
-    trackMouse: true
+    trackMouse: true,
   });
 
+  // Listen for scroll events to update the background color
+  useEffect(() => {
+    const pageContainer = document.querySelector('.page'); // Target the .page element
+    if (!pageContainer) return;
+  
+    const handleScroll = () => {
+      const scrollY = pageContainer.scrollTop;
+      console.log("Scroll position:", scrollY);
+      setScrolled(scrollY > 50);
+    };
+  
+    handleScroll();
+    pageContainer.addEventListener('scroll', handleScroll);
+    return () => pageContainer.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="nav-bar" {...handlers} >
+    <div className={`nav-bar ${scrolled ? "scrolled" : ""}`} {...handlers}>
       <Link className="logo" to="/">
         <img src={LogoS} alt="logo" />
       </Link>
       <nav>
-        <NavLink exact="true" activeclassname="active" to="/">
+        <a onClick={() => scrollToSection("home-section")}>
           <FontAwesomeIcon icon={faHome} />
           <span>Home</span>
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
+        </a>
+        <a onClick={() => scrollToSection("about-section")}>
           <FontAwesomeIcon icon={faUser} />
           <span>About</span>
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" className="projects-link" to="/projects">
+        </a>
+        <a onClick={() => scrollToSection("projects-section")}>
           <FontAwesomeIcon icon={faRocket} />
           <span>Projects</span>
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
+        </a>
+        <a onClick={() => scrollToSection("contact-section")}>
           <FontAwesomeIcon icon={faEnvelope} />
           <span>Contact</span>
-        </NavLink>
+        </a>
       </nav>
       <div className="social-links">
         <ul>
           <li>
-            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ngedenidze/">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/company/wcfcllc"
+            >
               <FontAwesomeIcon icon={faLinkedin} color="white" />
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noreferrer" href="https://www.github.com/Ngedenidze/">
-              <FontAwesomeIcon icon={faGithub} color="white" />
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/winnerscirclefc/"
+            >
+              <FontAwesomeIcon icon={faInstagram} color="white" />
             </a>
           </li>
         </ul>
@@ -65,33 +103,60 @@ const Sidebar = () => {
         <div className="line2"></div>
         <div className="line3"></div>
       </div>
-      <div className={`drawer ${drawerOpen ? 'open' : ''} `}>
-       
+      <div className={`drawer ${drawerOpen ? "open" : ""}`}>
         <button className="close-button" onClick={toggleDrawer}>
           <FontAwesomeIcon icon={faTimes} />
         </button>
-        <NavLink exact="true" activeclassname="active" to="/" onClick={toggleDrawer}>
+        <a
+          onClick={() => {
+            scrollToSection("home-section");
+            toggleDrawer();
+          }}
+        >
           Home
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/about" onClick={toggleDrawer}>
+        </a>
+        <a
+          onClick={() => {
+            scrollToSection("about-section");
+            toggleDrawer();
+          }}
+        >
           About
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/projects" onClick={toggleDrawer}>
+        </a>
+        <a
+          onClick={() => {
+            scrollToSection("projects-section");
+            toggleDrawer();
+          }}
+        >
           Projects
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/contact" onClick={toggleDrawer}>
+        </a>
+        <a
+          onClick={() => {
+            scrollToSection("contact-section");
+            toggleDrawer();
+          }}
+        >
           Contact
-        </NavLink>
+        </a>
         <div className="social-links">
           <ul>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ngedenidze/">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/company/wcfcllc"
+              >
                 <FontAwesomeIcon icon={faLinkedin} color="white" />
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noreferrer" href="https://www.github.com/Ngedenidze/">
-                <FontAwesomeIcon icon={faGithub} color="white" />
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.instagram.com/winnerscirclefc/"
+              >
+                <FontAwesomeIcon icon={faInstagram} color="white" />
               </a>
             </li>
           </ul>

@@ -1,9 +1,12 @@
 /* TypingEffect.scss */
 .typing-effect {
-    font-size: 2vw;
+    font-size: 3rem;
     font-weight: 900;
     font-family: 'Courier New', Courier, monospace;
     display: inline-block;
+    color: #EEE5DA;
+    position: relative;
+
   }
   
   .cursor {
@@ -24,6 +27,6 @@
   
   @media screen and (max-width: 1200px) {
     .typing-effect {
-      font-size: 20px;
+
     }
   }

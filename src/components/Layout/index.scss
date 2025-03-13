@@ -1,20 +1,22 @@
+.App {
+  display: flex;
+  height: 100vh; // Full viewport height
+  overflow: hidden; // Prevent window scrolling
+}
+
 .page {
+  flex: 1;
     width: 100vw;
     height: 100vh;
     margin: 0;
     margin-top: 10rem;
     padding: 0;
-    overflow-y: visible;
-    overflow-x: hidden;
+  overflow: auto;
     scrollbar-width: none;
     background-repeat: repeat;
 
     
   }
-
-
- 
-  
   .top-tags {
     bottom: auto;
     top: 120px;

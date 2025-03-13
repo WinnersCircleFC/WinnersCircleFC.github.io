@@ -10,7 +10,10 @@
   z-index: 100;
   color: white;
   width: 100vw;
-
+  &.scrolled {
+    background: #262626;
+    position: fixed;
+  }
    .burger {
     margin-right: 4rem;
   }
@@ -41,8 +44,9 @@
 
           svg {
             &:hover {
-              color: #02c8ff;
-              transform: translateY(-2px);
+              color: #262626;
+              filter: drop-shadow(-2px 2px 6px #f9f9f8);
+              
               transition: all 0.3s ease;
             }
           }
@@ -82,26 +86,32 @@
     align-content: center;
     a {
       font-size: 3rem;
-      color: white;
+      color: #EEE5DA;
       display: flex;
       flex-direction: column;
       line-height: 4rem;
       height: 4rem;
       position: relative;
       text-decoration: none;
-      padding: 0px;
+      padding: 0;
       margin: 0rem 1rem;
-
+    
       i {
         transition: all 0.3s ease-out;
       }
-
+    
       &:hover {
-        transform: translateY(-2px);
         transition: all 0.3s ease-in-out;
-        color: #02c8ff;
-      }
+        color: #EEE5DA;
 
+      }
+    
+      // Only apply drop shadow to SVGs on hover
+      &:hover svg {
+        color: #262626;
+        filter: drop-shadow(2px 2px 10px #f9f9f8);
+      }
+    
       &:after {
         color: white;
         content: "";
@@ -115,12 +125,15 @@
         opacity: 0;
         transition: all 0.3s ease-out;
       }
+    
       &:first-child {
         &::after {
           content: "HOME";
         }
-      }
+      } 
     }
+    
+    
     a.active {
       svg {
         color: #02c8ff;

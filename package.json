@@ -44,9 +44,13 @@
     "webgi": "^0.0.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.22.0",
     "@types/webgi": "https://storage.googleapis.com/dist.pixotronics.com/webgi/runtime/bundle-types-0.7.9.tgz",
     "customize-cra": "^1.0.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.4",
     "gh-pages": "^6.1.1",
+    "globals": "^16.0.0",
     "react-app-rewired": "^2.2.1",
     "vite": "^4.3.9",
     "vite-plugin-static-copy": "^0.16.0"
@@ -60,11 +64,11 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+  "extends": "react-app",
+  "env": {
+    "jest": true
+  }
+},
   "browserslist": {
     "production": [
       ">0.2%",

@@ -1,5 +1,7 @@
 $primary-color: #02c8ff;
-
+html {
+  scroll-behavior: smooth;
+}
 @import 'animate.css';
 @import '../node_modules/loaders.css/src/animations/ball-grid-pulse.scss';
 
@@ -41,6 +43,5 @@ textarea {
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: none;
-  scroll-behavior: smooth;
   overflow: visible;
 }

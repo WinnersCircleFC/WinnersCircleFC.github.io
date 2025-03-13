@@ -7,6 +7,9 @@ import IconChevronRight from "./IconChevronRight";
 import GLTFModel from "../Animated Laptop/GLTFModel";
 import TypingEffect from "../Typing/TypingEffect"; 
 import flyImageSrc from './../../assets/next.png';
+import About from "../About";
+import Project from "../Projects";
+import Contact from "../Contact";
 
 function loadScript(src) {
   return new Promise((resolve, reject) => {
@@ -77,7 +80,7 @@ const Home = () => {
       for (let i = 1; i < trail.length; i++) {
         ctx.lineTo(trail[i].x, trail[i].y);
       }
-      ctx.strokeStyle = "rgba(0, 150, 255, 0.5)";
+      ctx.strokeStyle = "#EEE5DA";
       ctx.lineWidth = 2;
       ctx.stroke();
       // Draw trail 2
@@ -86,7 +89,7 @@ const Home = () => {
       for (let i = 1; i < trail2.length; i++) {
         ctx.lineTo(trail2[i].x, trail2[i].y);
       }
-      ctx.strokeStyle = "rgba(0, 150, 255, 0.5)";
+      ctx.strokeStyle = "#EEE5DA";
       ctx.lineWidth = 2;
       ctx.stroke();
 
@@ -111,22 +114,25 @@ const Home = () => {
 
   return (
     <>
-      <div className="container home-page">
+      <div className="container home-page" id="home-section">
         <canvas ref={canvasRef} className="fly-canvas"></canvas>
         <div className="text-zone">
           <div className="headings">
             <h1>
-              <span className={`${letterClass} _1`}>Hey, </span>
-              <span className={`${letterClass} _2`}>I am </span>
-              <span className={`${letterClass} _3`}>Nika!</span>
+              <span className={`${letterClass} _1`}>Welcome </span>
+              <span className={`${letterClass} _2`}>to</span>
+              <span className={`${letterClass} _3`}>Winners Circle</span>
               <br />
             </h1>
             <h1 className="title">
               <TypingEffect
                 textArray={[
-                  "Full-Stack Developer",
-                  "AI Researcher",
-                  "Software Developer",
+                  "T-shirts",
+                  "Hoodies",
+                  "Sweatpants",
+                  "Bags",
+                  "Athletic Gear",
+                  "Formal Attire",
                 ]}
                 typingSpeed={100}
                 deletingSpeed={50}
@@ -136,13 +142,12 @@ const Home = () => {
           </div>
           <h2>
             <span className={`${letterClass} _5`}>
-              Crafting Innovative Solutions with Full-Stack Development and AI
-              Expertise
+           Delivering high quality custom apparel with precision and excellence. Elevate your brand with us. Your vision, our craft!
             </span>
           </h2>
           <div className="buttonContainer">
             <button className="btnProject" onClick={handleClick}>
-              <span className="text">PROJECTS</span>
+              <span className="text">Vendors</span>
               <svg
                 height="24"
                 width="24"
@@ -156,7 +161,7 @@ const Home = () => {
               </svg>
             </button>
             <a href="/resume.pdf" download className="btnContact">
-              <span className="text">RESUME</span>
+              <span className="text">Get A Quote</span>
               <svg
                 height="24"
                 width="24"
@@ -172,10 +177,19 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <img src={require("./back.png")} alt="" className="home-page-pic" />
+          <img src={require("./../../assets/WCFC Logo_White.png")} alt="" className="home-page-pic" />
         </div>
       </div>
       <Loader type="ball-grid-pulse" color="#339ecc" />
+      <div id="about-section">
+        <About />
+      </div>
+      <div id="projects-section">
+        <Project />
+      </div>
+      <div id="contact-section">
+        <Contact />
+      </div>
     </>
   );
 };
