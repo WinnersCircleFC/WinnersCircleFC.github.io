@@ -63,8 +63,8 @@ const Contact = () => {
           <div className="contact-form">
      
             <div className="header">
-            <span className={`${letterClass} _1`}>Contact </span>
-            <span className={`${letterClass} _2`}>Me</span>
+            <span>Contact </span>
+            <span>Me</span>
               </div>
           
             <form ref={form} onSubmit={sendEmail}>
@@ -108,16 +108,16 @@ const Contact = () => {
 
         <div className="info-map">
           <div className="card">
-            <div className="card-photo"><img src={require('./../../assets/logo-2.png')} alt="Nika Gedenidze Icon"></img></div>
-            <div className="card-title">Nika Gedenidze <br />
-              <span>Software Engineer</span>
+            <div className="card-photo"><img src={require('./../../assets/WCFC Logo_White.png')} alt="Nika Gedenidze Icon"></img></div>
+            <div className="card-title">Winners Circle FC<br />
+              <span>Wholesale Company</span>
             </div>
             <div className="card-socials">
-              <span>Caldwell, NJ, 07006</span>
+              <span>Crusskill, NJ</span>
               <br/>
-              <span>+1 (717) 775 - 0711</span>
+              <span>+1 201 732 0770</span>
               <br/>
-              <span>Ngedenidze@outlook.com</span>
+              <span>winnerscirclefc@gmail.com</span>
             </div>
           </div>
         </div>

@@ -119,20 +119,20 @@ const Home = () => {
         <div className="text-zone">
           <div className="headings">
             <h1>
-              <span className={`${letterClass} _1`}>Welcome </span>
-              <span className={`${letterClass} _2`}>to</span>
-              <span className={`${letterClass} _3`}>Winners Circle</span>
-              <br />
+              <span>Welcome to Winners Circle</span>
+          
             </h1>
             <h1 className="title">
               <TypingEffect
                 textArray={[
-                  "T-shirts",
+                  "T-Shirts",
                   "Hoodies",
                   "Sweatpants",
-                  "Bags",
+                  "Sweatshirts",
+                  "Bags/Accessories",
                   "Athletic Gear",
                   "Formal Attire",
+                  "...and much more"
                 ]}
                 typingSpeed={100}
                 deletingSpeed={50}
@@ -141,27 +141,12 @@ const Home = () => {
             </h1>
           </div>
           <h2>
-            <span className={`${letterClass} _5`}>
-           Delivering high quality custom apparel with precision and excellence. Elevate your brand with us. Your vision, our craft!
+            <span>Delivering high quality custom apparel with precision and excellence. Elevate your brand with us. Your vision, our craft!
             </span>
           </h2>
           <div className="buttonContainer">
             <button className="btnProject" onClick={handleClick}>
-              <span className="text">Vendors</span>
-              <svg
-                height="24"
-                width="24"
-                fill="#FFFFFF"
-                viewBox="0 0 24 24"
-                data-name="Layer 1"
-                id="Layer_1"
-                className="sparkle"
-              >
-                <IconLogoAppleAr />
-              </svg>
-            </button>
-            <a href="/resume.pdf" download className="btnContact">
-              <span className="text">Get A Quote</span>
+            <span className="text">Get A Quote</span>
               <svg
                 height="24"
                 width="24"
@@ -173,7 +158,7 @@ const Home = () => {
               >
                 <IconChevronRight />
               </svg>
-            </a>
+            </button>
           </div>
         </div>
         <div>

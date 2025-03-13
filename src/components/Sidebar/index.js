@@ -6,7 +6,7 @@ import {
   faEnvelope,
   faHome,
   faUser,
-  faRocket,
+  faBookOpen,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -68,8 +68,8 @@ const Sidebar = () => {
           <span>About</span>
         </a>
         <a onClick={() => scrollToSection("projects-section")}>
-          <FontAwesomeIcon icon={faRocket} />
-          <span>Projects</span>
+        <FontAwesomeIcon icon={faBookOpen}/>
+          <span>Catalog</span>
         </a>
         <a onClick={() => scrollToSection("contact-section")}>
           <FontAwesomeIcon icon={faEnvelope} />
@@ -129,7 +129,7 @@ const Sidebar = () => {
             toggleDrawer();
           }}
         >
-          Projects
+          Catalog
         </a>
         <a
           onClick={() => {

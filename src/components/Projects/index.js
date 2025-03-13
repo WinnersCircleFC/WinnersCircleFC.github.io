@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./index.scss";
+import ClothingBrandCarousel from "./ClothingBrandCarousel";
 import {
   SiPython,
   SiSaaS,
@@ -14,7 +15,6 @@ import {
   SiVisualstudiocode,
   SiGithub,
   SiJavascript,
-  SiTailwindcss,
   SiMongodb,
   SiHeroku,
   SiGit,
@@ -180,12 +180,15 @@ const Projects = () => {
 
   return (
     <div className={`projects-page ${fadeClass} `}>
-      <h1>
-        <span className={`${letterClass} _1`}>On going/Finished Projects</span>
-      </h1>
-      <div className="projects-grid">
+       <h1>
+Vendors          </h1>
+
+    <ClothingBrandCarousel />
+          
+     
+      {/* <div className="projects-grid">
         {projectData.map((project, index) => (
-          <div
+          <div 
             className="project-card"
             key={index}
             onClick={() => handleCardClick(project)}
@@ -209,9 +212,18 @@ const Projects = () => {
             />
           </div>
         ))}
-      </div>
-
-      {modalData && (
+      </div> */}
+     <div className="catalog-grid">
+      <div className="info-card">
+      <h1>
+        <span className={`${letterClass} _1`}>Catalog</span>
+      </h1>
+          <h1>
+            Coming Soon
+          </h1>
+        </div>
+        </div>
+      {/* {modalData && (
         <div className="modal" onClick={handleCloseModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <span className="close" onClick={handleCloseModal}>
@@ -322,7 +334,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

@@ -24,13 +24,13 @@
 }
 .about-page{
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
   padding: 0 10px;
   margin: 0 10px;
-  margin-bottom: 20px;
-  min-height: 110vh;
-  color: #fff;
+  height: 100%;
+  color: #EEE5DA;
   font-family: 'Roboto', sans-serif;
   transition: all 0.5s ease-in-out;
   overflow: scroll;
@@ -38,9 +38,9 @@
   
 
   h1{
-    color:#02c8ff;
-    font-size: 1.625rem;
-    margin: 1rem 0;
+    color:#EEE5DA;
+    font-size: 4rem;
+    margin: 1rem 0; 
   }
   .info-card{
     display: flex;
@@ -56,7 +56,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #101113df;
     box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.1);
-    background-image: url('../../star.svg');
+    // background-image: url('../../star.svg');
     background-repeat: no-repeat;
     background-size: 100px 100px;
     background-position: 90% 0%;
@@ -72,9 +72,9 @@
   .text-zone{
     position: relative;
     height: 100%;
-    width: 50%;
+    width: 100%;
     padding: 4rem;
-    margin-bottom: 40px;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,21 +82,14 @@
     
     p{
       color:white;
-      font-size: 1.225rem;
+      font-size: 2.5rem;
       margin: 1rem 0;
     }
     li{
       font-size: 1.5rem;
     }
   }
-  .stage-cube-cont{
-    height: 100%;
-    width: 50%;
-    padding: 4rem;
-    h1{
-      text-align: center;
-    }
-  }
+ 
   .tech-grid {
     height: 100%;
     width: 100%;
