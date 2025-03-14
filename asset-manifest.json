@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.66135147.css",
-    "main.js": "/static/js/main.32358d67.js",
+    "main.css": "/static/css/main.21a0efed.css",
+    "main.js": "/static/js/main.e42dde8c.js",
     "static/js/787.e02c0aaf.chunk.js": "/static/js/787.e02c0aaf.chunk.js",
     "static/media/research.png": "/static/media/research.07fe8bfa768d71a5c5a6.png",
     "static/media/adminpg.png": "/static/media/adminpg.aa64495f935daadde96c.png",
@@ -22,7 +22,7 @@
     "static/media/jordan-2.svg": "/static/media/jordan-2.37de36a0f9fc625af356add3855d9d73.svg",
     "static/media/nike-11.svg": "/static/media/nike-11.556efbbd8e292265e896e175fde7a154.svg",
     "static/media/hanes.svg": "/static/media/hanes.33ffd19e67cf7b530c76f2524a3273ef.svg",
-    "static/media/under-armour-logo-svgrepo-com.svg": "/static/media/under-armour-logo-svgrepo-com.f48630c816b47e2a4d92f5630c69b764.svg",
+    "static/media/under-armour-logo-svgrepo-com.svg": "/static/media/under-armour-logo-svgrepo-com.771c746ec8ab8641de5b7c0b3c577f71.svg",
     "static/media/adidas-logo-svgrepo-com (2).svg": "/static/media/adidas-logo-svgrepo-com (2).cdc5f49a084f2558eb6e3113e7dd4732.svg",
     "static/media/comfort-colors-logo-vector.svg": "/static/media/comfort-colors-logo-vector.4a1dd974102ee0f65a639edbe752d608.svg",
     "static/media/russell-athletic-2.svg": "/static/media/russell-athletic-2.05b908f0ef79ef38a1d7622d52b1ddcd.svg",
@@ -40,12 +40,12 @@
     "static/media/van-heusen-1.svg": "/static/media/van-heusen-1.cb97ac3e16f7aa4803194c552b6c9de7.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.66135147.css.map": "/static/css/main.66135147.css.map",
-    "main.32358d67.js.map": "/static/js/main.32358d67.js.map",
+    "main.21a0efed.css.map": "/static/css/main.21a0efed.css.map",
+    "main.e42dde8c.js.map": "/static/js/main.e42dde8c.js.map",
     "787.e02c0aaf.chunk.js.map": "/static/js/787.e02c0aaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.66135147.css",
-    "static/js/main.32358d67.js"
+    "static/css/main.21a0efed.css",
+    "static/js/main.e42dde8c.js"
   ]
 }
