@@ -1,29 +1,18 @@
 import "./index.scss";
+import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "react-loaders";
-import IconLogoAppleAr from "./IconLogoAppleAr";
 import IconChevronRight from "./IconChevronRight";
-import GLTFModel from "../Animated Laptop/GLTFModel";
 import TypingEffect from "../Typing/TypingEffect"; 
 import flyImageSrc from './../../assets/next.png';
 import About from "../About";
 import Project from "../Projects";
 import Contact from "../Contact";
 
-function loadScript(src) {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement("script");
-    script.src = src;
-    script.type = "module";
-    script.onload = resolve;
-    script.onerror = reject;
-    document.head.appendChild(script);
-  });
-}
 const Home = () => {
   const navigation = useNavigate();
-  const [letterClass, setLetterClass] = useState("text-animate");
+
   const canvasRef = useRef(null);
 
   const handleClick = () => {
@@ -31,7 +20,6 @@ const Home = () => {
   };
   useEffect(() => {
     const timerId = setTimeout(() => {
-      setLetterClass("text-animate-hover");
     }, 4000);
 
     return () => clearTimeout(timerId);
