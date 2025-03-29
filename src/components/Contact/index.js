@@ -53,7 +53,7 @@ const Contact = () => {
   }
 
   if (isLoading) {
-    return <Loader type="ball-grid-pulse" color="#339ecc" />;
+    return <Loader type="ball-grid-pulse" color="#000" />;
   }
 
   return (

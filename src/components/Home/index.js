@@ -153,7 +153,7 @@ const Home = () => {
           <img src={require("./../../assets/WCFC Logo_White.png")} alt="" className="home-page-pic" />
         </div>
       </div>
-      <Loader type="ball-grid-pulse" color="#339ecc" />
+      <Loader type="ball-grid-pulse" color="#000" />
       <div id="about-section">
         <About />
       </div>

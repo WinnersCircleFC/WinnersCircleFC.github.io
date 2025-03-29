@@ -174,7 +174,7 @@ const Projects = () => {
   };
 
   if (isLoading) {
-    return <Loader type="ball-grid-pulse" color="#339ecc" />;
+    return <Loader type="ball-grid-pulse" color="#000" />;
   }
   <script src="http://localhost:8097"></script>
 
