@@ -216,11 +216,11 @@ Vendors          </h1>
      <div className="catalog-grid">
       <div className="info-card">
       <h1>
-        <span className={`${letterClass} _1`}>Catalog</span>
+        <span>Catalog</span>
       </h1>
-          <h1>
-            Coming Soon
-          </h1>
+          <h2>
+         <span>Coming Soon… Stay Tuned! </span>
+          </h2>
         </div>
         </div>
       {/* {modalData && (

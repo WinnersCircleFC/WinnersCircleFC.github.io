@@ -18,7 +18,10 @@ html {
   font-family: 'Coolvetica';
   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format(woff2);
 }
-
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('opentype');
+}
 input,
 textarea {
   font-family: 'Lobster Regular'
@@ -44,4 +47,5 @@ textarea {
   box-sizing: border-box;
   scrollbar-width: none;
   overflow: visible;
+  font-family: 'Montserrat', sans-serif;
 }

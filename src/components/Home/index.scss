@@ -72,7 +72,6 @@ $base-button-height: 5em;
       text-align: left;
       color: white;
       font-weight: 400;
-      font-family: sans-serif;
       letter-spacing: 3px;
       animation: fadeIn 1s 1.8s backwards;
     }
@@ -88,7 +87,6 @@ $base-button-height: 5em;
   .title {
     color: #339ecc;
     font-weight: 800;
-    font-family: sans-serif;
     font-weight: 900;
     letter-spacing: 2px;
     animation: fadeIn 1s 1.8s backwards;
@@ -101,13 +99,11 @@ $base-button-height: 5em;
     font-size: 6rem;
     line-height: 6rem;
     margin: 0 5rem;
-    font-family: 'Roboto';
     font-weight: 800;
     letter-spacing: 2px;
     text-align: left;
 
     &:before {
-      font-family: 'La Belle Aurore', cursive;
       color: #65e2d9;
       font-size: 18px;
       position: absolute;
@@ -117,7 +113,7 @@ $base-button-height: 5em;
     }
 
     &:after {
-      font-family: 'La Belle Aurore', cursive;
+
       color: #65e2d9;
       font-size: 18px;
       position: absolute;

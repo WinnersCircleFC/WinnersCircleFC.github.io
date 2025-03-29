@@ -31,7 +31,6 @@
   margin: 0 10px;
   height: 100%;
   color: #EEE5DA;
-  font-family: 'Roboto', sans-serif;
   transition: all 0.5s ease-in-out;
   overflow: scroll;
   scrollbar-width: none;
@@ -39,15 +38,16 @@
 
   h1{
     color:#EEE5DA;
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin: 1rem 0; 
+    text-align: center;
   }
   .info-card{
     display: flex;
     flex-direction: column;
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
     cursor: pointer;
     overflow: hidden;
     padding: 4rem;
@@ -82,7 +82,7 @@
     
     p{
       color:white;
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin: 1rem 0;
     }
     li{
@@ -174,7 +174,6 @@
     min-height: 80vh;
     margin-bottom: 50px;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
     padding: 0rem;
     transition: all 0.5s ease-in-out;
 

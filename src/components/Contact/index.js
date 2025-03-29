@@ -63,8 +63,8 @@ const Contact = () => {
           <div className="contact-form">
      
             <div className="header">
-            <span>Contact </span>
-            <span>Me</span>
+            <span>Contact Us</span>
+      
               </div>
           
             <form ref={form} onSubmit={sendEmail}>
@@ -113,7 +113,7 @@ const Contact = () => {
               <span>Wholesale Company</span>
             </div>
             <div className="card-socials">
-              <span>Crusskill, NJ</span>
+              <span>New Jersey</span>
               <br/>
               <span>+1 201 732 0770</span>
               <br/>
